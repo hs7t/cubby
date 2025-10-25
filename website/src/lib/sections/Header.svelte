@@ -10,6 +10,7 @@
         align-items: center;
         justify-content: center;
     }
+
     h1 {
         font-size: var(--c-font-size-AA);
         font-family: var(--c-font-family-display);
