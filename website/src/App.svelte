@@ -23,5 +23,10 @@
 
     main {
         width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        gap: 2rem;
+        padding: 10%;
     }
 </style>
