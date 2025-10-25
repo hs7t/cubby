@@ -68,4 +68,8 @@
         font-size: 0.75rem;
         color: var(--c-color-primary);
     }
+
+    :global(.leaflet-container) {
+        font-family: var(--c-font-family-primary);
+    }
 </style>
