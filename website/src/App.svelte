@@ -1,6 +1,7 @@
 <script lang="ts">
     import Map from "./lib/components/Map.svelte";
     import Header from "./lib/sections/Header.svelte"
+    import Navigation from "./lib/sections/Navigation.svelte";
 </script>
 
 <main>
@@ -9,6 +10,8 @@
     <Map markers={[
         { coordinates: [500, 500], title: "Meow", action: () => { console.log("I was clicked!") }, id: "testMarker" }
     ]}></Map>
+
+    <Navigation></Navigation>
 </main>
 
 <style>
