@@ -11,6 +11,6 @@
 
 <style>
   :global(body) {
-    font-family: var(--c-font-family-pri);
+    font-family: var(--c-font-family-primary);
   }
 </style>
