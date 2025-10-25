@@ -1,5 +1,5 @@
 export type Marker = {
-    coordinates: L.LatLng,
+    coordinates: Array<number>,
     title: string,
     action: Function
 }
