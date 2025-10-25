@@ -8,8 +8,10 @@
 
     onMount(async () => {
         map = L.map('map', {
-            crs: L.CRS.Simple
-        });
+            crs: L.CRS.Simple,
+            minZoom: -2,
+            attributionControl: false,
+        })
         let bounds: LatLngBoundsExpression = [[0, 0], [1000, 1000]]
         let image = L.imageOverlay(LargeMapImg, bounds).addTo(map)
 
