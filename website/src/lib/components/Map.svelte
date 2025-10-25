@@ -60,6 +60,12 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: white;
+
+        background-color: var(--c-color-background-C);
+        border: 1.5pt solid var(--c-color-primary);
+        border-radius: 100pt;
+        font-weight: 600;
+        font-size: 0.75rem;
+        color: var(--c-color-primary);
     }
 </style>
