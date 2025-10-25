@@ -1,5 +1,6 @@
 export type Marker = {
     coordinates: Array<number>,
     title: string,
-    action: Function
+    action: Function,
+    id: string
 }
