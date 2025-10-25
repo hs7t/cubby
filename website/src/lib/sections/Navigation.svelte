@@ -11,6 +11,20 @@
 
 <style>
     .navigator .item {
+        display: flex;
+        flex-direction: row;
+
+        padding: 0.5rem;
+
         background-color: var(--c-color-background-B);
+    }
+
+    .navigator .item .info {
+        flex-grow: 2;
+    }
+    
+    .navigator .item .info p {
+        width: 100%;
+        text-align: right;
     }
 </style>
