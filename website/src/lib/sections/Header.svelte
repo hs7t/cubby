@@ -17,6 +17,6 @@
     h1 {
         font-size: var(--c-font-size-AAA);
         font-family: var(--c-font-family-display);
-        font-weight: 500;
+        font-weight: 400;
     }
 </style>
