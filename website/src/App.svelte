@@ -5,7 +5,7 @@
 
 <main>
     <Map markers={[
-        { coordinates: [500, 500], title: "Meow", action: () => {}  }
+        { coordinates: [500, 500], title: "Meow", action: () => {}, id: "testMarker" }
     ]}></Map>
 </main>
 
