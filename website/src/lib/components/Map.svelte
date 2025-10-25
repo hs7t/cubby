@@ -30,7 +30,7 @@
                 let markerNumberIcon = L.divIcon({ ...defaultMarkerNumberIcon, html: `<div>${Object.keys(addedMarkers).length}</div>` })
 
                 addedMarkers[marker.id] = L.marker(marker.coordinates as L.LatLngTuple, { icon: markerNumberIcon }).addTo(map)
-                addedMarkers[marker.id].bindPopup(marker.title)
+                addedMarkers[marker.id].bindTooltip(marker.title)
                 addedMarkers[marker.id].on('click', marker.action as L.LeafletMouseEventHandlerFn)
             }
         }
