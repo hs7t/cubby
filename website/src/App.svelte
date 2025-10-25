@@ -16,6 +16,7 @@
 
   :global(#app) {
     width: clamp(40vw, 500px, 90vw);
+    margin: auto;
   }
 
   main {
