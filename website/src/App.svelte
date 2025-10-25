@@ -10,16 +10,16 @@
 </main>
 
 <style>
-  :global(body) {
-    font-family: var(--c-font-family-primary);
-  }
+    :global(body) {
+        font-family: var(--c-font-family-primary);
+    }
 
-  :global(#app) {
-    width: clamp(40vw, 500px, 90vw);
-    margin: auto;
-  }
+    :global(#app) {
+        width: clamp(40vw, 500px, 90vw);
+        margin: auto;
+    }
 
-  main {
-    width: 100%;
-  }
+    main {
+        width: 100%;
+    }
 </style>
