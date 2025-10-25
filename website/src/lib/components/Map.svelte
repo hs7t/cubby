@@ -2,6 +2,9 @@
     import { onMount, onDestroy } from "svelte";
     import L, { type LatLngBoundsExpression } from "leaflet"
     import LargeMapImg from '../../assets/Large Map.svg'
+    import type { Marker } from "../../shared.svelte";
+
+    let { markers = undefined as undefined|Array<Marker> } = $props()
 
     let mapElement
     let map: L.Map
@@ -15,6 +18,12 @@
         let bounds: LatLngBoundsExpression = [[0, 0], [1000, 1000]]
         let image = L.imageOverlay(LargeMapImg, bounds).addTo(map)
 
+        if (markers != undefined) {
+            for (let marker of markers) {
+                L.marker(marker.coordinates).addTo(map);
+            }
+        }
+        
         map.fitBounds(bounds);
     })
 
