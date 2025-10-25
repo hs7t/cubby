@@ -55,4 +55,11 @@
         width: min(100cqw, 100cqh);
         aspect-ratio: 1 / 1;
     }
+
+    :global(.markerNumberIcon) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+    }
 </style>
