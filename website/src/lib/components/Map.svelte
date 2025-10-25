@@ -46,8 +46,7 @@
     })
 </script>
 
-<div id="map" bind:this={mapElement}>
-</div>
+<div id="map" bind:this={mapElement}></div>
 
 <style>
     #map {
@@ -61,7 +60,8 @@
         justify-content: center;
 
         background-color: var(--c-color-background-C);
-        border: 1.5pt solid var(--c-color-primary);
+        border: var(--c-border-generic);
+        border-width: 1.5pt;
         border-radius: 100pt;
         font-weight: 600;
         font-size: 0.75rem;
