@@ -20,6 +20,5 @@
 
   main {
     width: 100%;
-    container-name: main;
   }
 </style>
