@@ -5,7 +5,7 @@
 
 <main>
     <Map markers={[
-        { coordinates: [500, 500], title: "Meow", action: () => {}, id: "testMarker" }
+        { coordinates: [500, 500], title: "Meow", action: () => { console.log("I was clicked!") }, id: "testMarker" }
     ]}></Map>
 </main>
 
