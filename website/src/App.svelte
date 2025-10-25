@@ -10,4 +10,7 @@
 </main>
 
 <style>
+  :global(body) {
+    font-family: var(--c-font-family-pri);
+  }
 </style>
