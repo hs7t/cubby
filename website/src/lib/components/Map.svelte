@@ -51,8 +51,7 @@
 
 <style>
     #map {
-        height: min(100cqw, 100cqh);
-        width: min(100cqw, 100cqh);
+        width: 100%;
         aspect-ratio: 1 / 1;
     }
 
