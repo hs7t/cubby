@@ -4,7 +4,7 @@
     import LargeMapImg from '../../assets/Large Map.svg'
     import type { Marker } from "../../shared.svelte";
 
-    let { markers = undefined as undefined|Array<Marker> } = $props()
+    let { markers = undefined as undefined|Array<Marker>, addedMarkers = $bindable({}) as Record<string, L.Marker> } = $props()
 
     let mapElement
     let map: L.Map
@@ -17,8 +17,6 @@
         })
         let bounds: L.LatLngBoundsExpression = [[0, 0], [1000, 1000]]
         let image = L.imageOverlay(LargeMapImg, bounds).addTo(map)
-
-        let addedMarkers: Record<string, L.Marker> = {}
 
         if (markers != undefined) {
             for (let marker of markers) {
