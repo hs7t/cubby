@@ -14,6 +14,7 @@
 <style>
     :global(body) {
         font-family: var(--c-font-family-primary);
+        font-size: var(--c-font-size-A);
         background-color: var(--c-color-background-A);
         color: var(--c-color-primary);
     }
