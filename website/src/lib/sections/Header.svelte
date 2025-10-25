@@ -12,7 +12,7 @@
     }
 
     h1 {
-        font-size: var(--c-font-size-AA);
+        font-size: var(--c-font-size-AAA);
         font-family: var(--c-font-family-display);
     }
 </style>
