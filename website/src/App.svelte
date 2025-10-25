@@ -4,7 +4,9 @@
 </script>
 
 <main>
-    <Map></Map>
+    <Map markers={[
+        { coordinates: [500, 500], title: "Meow", action: () => {}  }
+    ]}></Map>
 </main>
 
 <style>
