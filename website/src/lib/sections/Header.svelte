@@ -9,6 +9,9 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+
+        padding-bottom: 0.5rem;
+        border-bottom: var(--c-border-generic);
     }
 
     h1 {
