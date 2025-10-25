@@ -1,6 +1,6 @@
 <script lang="ts">
     import { onMount, onDestroy } from "svelte";
-    import L, { type LatLngBoundsExpression } from "leaflet"
+    import L from "leaflet"
     import LargeMapImg from '../../assets/Large Map.svg'
     import type { Marker } from "../../shared.svelte";
 
@@ -15,12 +15,12 @@
             minZoom: -2,
             attributionControl: false,
         })
-        let bounds: LatLngBoundsExpression = [[0, 0], [1000, 1000]]
+        let bounds: L.LatLngBoundsExpression = [[0, 0], [1000, 1000]]
         let image = L.imageOverlay(LargeMapImg, bounds).addTo(map)
 
         if (markers != undefined) {
             for (let marker of markers) {
-                L.marker(marker.coordinates).addTo(map);
+                L.marker(marker.coordinates as L.LatLngTuple).addTo(map);
             }
         }
         
