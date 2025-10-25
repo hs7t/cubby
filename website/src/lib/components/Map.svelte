@@ -18,9 +18,12 @@
         let bounds: L.LatLngBoundsExpression = [[0, 0], [1000, 1000]]
         let image = L.imageOverlay(LargeMapImg, bounds).addTo(map)
 
+        let addedMarkers: Record<string, L.Marker> = {}
+
         if (markers != undefined) {
             for (let marker of markers) {
-                L.marker(marker.coordinates as L.LatLngTuple).addTo(map);
+                addedMarkers[marker.id] = L.marker(marker.coordinates as L.LatLngTuple).addTo(map);
+                addedMarkers[marker.id].bindPopup(marker.title)
             }
         }
         
