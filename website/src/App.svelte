@@ -13,4 +13,13 @@
   :global(body) {
     font-family: var(--c-font-family-primary);
   }
+
+  :global(#app) {
+    width: clamp(40vw, 500px, 90vw);
+  }
+
+  main {
+    width: 100%;
+    container-name: main;
+  }
 </style>
