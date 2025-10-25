@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 :root {
     --c-color-primary: #762500;
     --c-color-background-A: #FFBD9C;
