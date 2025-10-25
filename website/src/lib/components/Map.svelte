@@ -72,4 +72,8 @@
         font-family: var(--c-font-family-primary);
         background-color: var(--c-color-background-B);
     }
+
+    :global(.leaflet-control) {
+        user-select: none;
+    }
 </style>
