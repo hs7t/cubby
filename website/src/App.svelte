@@ -1,9 +1,11 @@
 <script lang="ts">
-  import Map from "./lib/components/Map.svelte";
-
+    import Map from "./lib/components/Map.svelte";
+    import Header from "./lib/sections/Header.svelte"
 </script>
 
 <main>
+    <Header></Header>
+
     <Map markers={[
         { coordinates: [500, 500], title: "Meow", action: () => { console.log("I was clicked!") }, id: "testMarker" }
     ]}></Map>
