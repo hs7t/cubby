@@ -3,4 +3,6 @@
     --c-color-background-A: #FFBD9C;
     --c-color-background-B: #FFDECD;
     --c-color-background-C: #FFFFFF;
+
+    --c-font-family-primary: "Inter", -apple-system, system-ui, sans-serif;
 }
