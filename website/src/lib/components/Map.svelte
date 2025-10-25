@@ -1,6 +1,6 @@
 <script lang="ts">
     import { onMount, onDestroy } from "svelte";
-    import L from "leaflet"
+    import L, { icon } from "leaflet"
     import LargeMapImg from '../../assets/Large Map.svg'
     import type { Marker } from "../../shared.svelte";
 
@@ -19,8 +19,17 @@
         let image = L.imageOverlay(LargeMapImg, bounds).addTo(map)
 
         if (markers != undefined) {
+            let defaultMarkerNumberIcon: L.DivIconOptions = {
+                className: "markerNumberIcon",
+                html: "<div>1</div>",
+                iconSize: [20, 20],
+                iconAnchor: [10, 10], // half of width + height, for some reason
+            }
+
             for (let marker of markers) {
-                addedMarkers[marker.id] = L.marker(marker.coordinates as L.LatLngTuple).addTo(map);
+                let markerNumberIcon = L.divIcon({ ...defaultMarkerNumberIcon, html: `<div>${Object.keys(addedMarkers).length}</div>` })
+
+                addedMarkers[marker.id] = L.marker(marker.coordinates as L.LatLngTuple, { icon: markerNumberIcon }).addTo(map)
                 addedMarkers[marker.id].bindPopup(marker.title)
                 addedMarkers[marker.id].on('click', marker.action as L.LeafletMouseEventHandlerFn)
             }
