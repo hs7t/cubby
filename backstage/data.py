@@ -18,6 +18,7 @@ class Website(BaseModel):
     cubbyId: str
     name: str
     url: str
+    address: str
 
 def addWebsite(website: Website):
     """
