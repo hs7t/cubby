@@ -14,6 +14,18 @@
 </section>
 
 <style>
+    .navigation {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navigator {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        flex-grow: 1;
+    }
+
     .navigator .item {
         display: flex;
         flex-direction: row;

@@ -5,13 +5,15 @@
 </script>
 
 <main>
-    <Header></Header>
-
-    <Map markers={[
-        { coordinates: [500, 500], title: "Meow", action: () => { console.log("I was clicked!") }, id: "testMarker" }
-    ]}></Map>
-
-    <Navigation></Navigation>
+    <span class="group first-group">
+        <Header></Header>
+        <Map markers={[
+            { coordinates: [500, 500], title: "Meow", action: () => { console.log("I was clicked!") }, id: "testMarker" }
+        ]}></Map>
+    </span>
+    <span class="group second-group">
+        <Navigation></Navigation>
+    </span>
 </main>
 
 <style>
@@ -28,16 +30,35 @@
     }
 
     :global(#app) {
-        width: clamp(40vw, 500px, 90vw);
-        margin: auto;
+        width: 100dvw;
+        height: 100dvh;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     main {
-        width: 100%;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
 
         gap: 2rem;
-        padding: 10%;
+        height: 90dvh;
+        width: 80dvw;
+    }
+
+    .group {
+        display: flex;
+        flex-grow: 1;
+        flex-shrink: 1;
+        gap: 1em;
+        flex-direction: column;
+        max-height: 100%;
+    }
+
+    :global(section), .group {
+        flex-grow: 1;
     }
 </style>
