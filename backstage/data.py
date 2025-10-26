@@ -1,3 +1,5 @@
+# type: ignore      // pylance doesn't like dataset
+
 import dataset
 DATABASE_URL = "sqlite:///_data.db"
 db = dataset.connect
