@@ -1,5 +1,6 @@
+import type { ServerResponse } from 'http';
 import * as config from '../config' 
-import ky from 'ky'
+import ky, { type KyResponse } from 'ky'
 
 export const api = ky.create({
   prefixUrl: config.API_URL,
@@ -13,3 +14,7 @@ export const api = ky.create({
     ],
   },
 });
+
+export const parseResponseJSON = async (requestResponse: KyResponse) => {
+  return JSON.parse(JSON.stringify(await requestResponse.json()));
+};
