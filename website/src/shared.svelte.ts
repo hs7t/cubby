@@ -12,7 +12,7 @@ type Website = {
   name: string;
   url: string;
   address: string;
-  mapCoordinates: Array<string>;
+  mapCoordinates: Array<number>;
 };
 
 export const websites = (await parseResponseJSON(
