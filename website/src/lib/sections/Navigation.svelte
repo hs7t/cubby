@@ -23,6 +23,7 @@
 
     .navigator .item p {
         text-transform: uppercase;
+        font-weight: 500;
     }
 
     .navigator .item .info {
