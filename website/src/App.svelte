@@ -1,8 +1,9 @@
 <script lang="ts">
     import Map from "./lib/components/Map.svelte";
-  import RandomStringClicker from "./lib/components/RandomStringClicker.svelte";
+    import RandomStringClicker from "./lib/components/RandomStringClicker.svelte";
     import Header from "./lib/sections/Header.svelte"
     import Navigation from "./lib/sections/Navigation.svelte";
+    import './shared.svelte'
 </script>
 
 <main>
