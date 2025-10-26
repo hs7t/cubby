@@ -19,12 +19,19 @@
 <style>
     button {
         align-self: center;
-        background-color: inherit;
+        background-color: var(--c-color-background-B);
+        border-radius: 100pt;
         border: none;
+        user-select: none;
+        transition: all 100ms;
 
         font-family: var(--c-font-family-display);
         font-size: var(--c-font-size-B);
         text-transform: uppercase;
         color: inherit;
+    }
+
+    button:active {
+        transform: scale(0.9) rotate(5deg);
     }
 </style>
