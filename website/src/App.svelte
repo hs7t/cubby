@@ -22,6 +22,11 @@
         color: var(--c-color-primary);
     }
 
+    :global(::selection) {
+        background-color: var(--c-color-primary);
+        color: var(--c-color-background-A);
+    }
+
     :global(#app) {
         width: clamp(40vw, 500px, 90vw);
         margin: auto;
