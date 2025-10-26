@@ -64,6 +64,10 @@ class NonExistentError(Exception):
     def __str__(self):
         return f"{self.message} (Error Code: {self.error_code})"
 
+def deleteWebsite(cubbyId: str): 
+    with db:
+        table = db['websites']
+        table.delete(cubbyId=cubbyId)
 
 def updateWebsite(website: Website):
     with db:
@@ -71,8 +75,6 @@ def updateWebsite(website: Website):
         if len(list(table.find(cubbyId=website.cubbyId))) > 0:
             data = website.model_dump()
             data['mapCoordinates'] = json.dumps(data['mapCoordinates'])
-            table.insert(data)
-
             table.update(data, ['cubbyId'])
         else:
             raise NonExistentError('cubbyId not found; nothing to update')
