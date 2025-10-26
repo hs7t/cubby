@@ -46,10 +46,33 @@ def addWebsite(website: Website):
     """
     with db:
         table = db['websites']
-        if (len(list(table.find(cubbyId=website.cubbyId))) == 0):
+        if len(list(table.find(cubbyId=website.cubbyId))) == 0:
             data = website.model_dump()
             data['mapCoordinates'] = json.dumps(data['mapCoordinates'])
             table.insert(data)
         else:
             print(list(table.find(cubbyId=website.cubbyId)))
             raise DuplicateError('cubbyId already registered')
+        
+class NonExistentError(Exception):
+    """Raised when there is no entry to update."""
+
+    def __init__(self, message):
+        super().__init__(message)
+        self.error_code = 10
+
+    def __str__(self):
+        return f"{self.message} (Error Code: {self.error_code})"
+
+
+def updateWebsite(website: Website):
+    with db:
+        table = db['websites']
+        if len(list(table.find(cubbyId=website.cubbyId))) > 0:
+            data = website.model_dump()
+            data['mapCoordinates'] = json.dumps(data['mapCoordinates'])
+            table.insert(data)
+
+            table.update(data, ['cubbyId'])
+        else:
+            raise NonExistentError('cubbyId not found; nothing to update')
