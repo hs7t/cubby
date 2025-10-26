@@ -1,5 +1,6 @@
 # type: ignore      // pylance doesn't like dataset
 
+import json
 import dataset
 import os
 from pydantic import BaseModel
@@ -15,7 +16,7 @@ def getWebsites():
     Returns all websites on the database.
     """
     results = list(websites.all())
-    
+
     for site in results:
         if isinstance(site['mapCoordinates'], str):
             site['mapCoordinates'] = json.loads(site['mapCoordinates'])
