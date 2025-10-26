@@ -1,3 +1,9 @@
 import dataset
+DATABASE_URL = "sqlite:///_data.db"
+db = dataset.connect
 
-db = dataset.connect("sqlite:///_data.db")
+websites = db['websites']
+
+def getWebsites():
+    return websites.all()
+
