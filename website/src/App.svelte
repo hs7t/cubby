@@ -13,6 +13,7 @@
                 action: () => { console.log("click!", website.name, website.cubbyId)},
                 id: website.cubbyId
             }
+            markers.push(marker)
         }
         return markers
     }) 
