@@ -50,8 +50,6 @@ def addWebsite(website: Website):
             data = website.model_dump()
             data['mapCoordinates'] = json.dumps(data['mapCoordinates'])
             table.insert(data)
-
-            table.insert()
         else:
             print(list(table.find(cubbyId=website.cubbyId)))
             raise DuplicateError('cubbyId already registered')
