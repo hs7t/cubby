@@ -50,8 +50,7 @@
 
 <style>
     #map {
-        width: 100%;
-        aspect-ratio: 1 / 1;
+        flex-grow: 1;
     }
 
     :global(.markerNumberIcon) {
