@@ -74,7 +74,14 @@
         border: var(--c-border-generic);
     }
 
-    :global(.leaflet-control) {
+    :global(.leaflet-control-zoom-in, .leaflet-control-zoom-out) {
         user-select: none;
+        background-color: var(--c-color-background-C) !important;
+        color: var(--c-color-primary) !important;
+    }
+
+    :global(.leaflet-control-zoom-in.leaflet-disabled, .leaflet-control-zoom-out.leaflet-disabled) {
+        user-select: none;
+        background-color: var(--c-color-background-B) !important;
     }
 </style>
