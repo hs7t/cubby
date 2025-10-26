@@ -9,7 +9,7 @@
         for (let website of websites) {
             let marker: Marker = {
                 title: website.name,
-                coordinates: website.coordinates,
+                coordinates: website.mapCoordinates,
                 action: () => { console.log("click!", website.name, website.cubbyId)},
                 id: website.cubbyId
             }
