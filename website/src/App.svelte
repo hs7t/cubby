@@ -45,8 +45,10 @@
         flex-wrap: wrap;
 
         gap: 2rem;
-        height: 80dvh;
-        width: 80dvw;
+        height: 80%;
+        width: 80%;
+
+        max-width: 1000px;
     }
 
     .group {
@@ -56,6 +58,10 @@
         gap: 1em;
         flex-direction: column;
         max-height: 100%;
+    }
+
+    .first-group {
+        justify-content: space-between;
     }
 
     :global(section), .group {
