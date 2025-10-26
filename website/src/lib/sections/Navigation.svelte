@@ -1,15 +1,17 @@
 
-<div class="navigator">
-    <div class="item">
-        <div class="number">
-            <p>1</p>
-        </div>
-        <div class="info">
-            <p class="site-name">Ali's Website</p>
-            <p class="site-address">12 Raspberry Way, HUK</p>
+<section class="navigation">
+    <div class="navigator">
+        <div class="item">
+            <div class="number">
+                <p>1</p>
+            </div>
+            <div class="info">
+                <p class="site-name">Ali's Website</p>
+                <p class="site-address">12 Raspberry Way, HUK</p>
+            </div>
         </div>
     </div>
-</div>
+</section>
 
 <style>
     .navigator .item {
