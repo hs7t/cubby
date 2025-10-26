@@ -19,6 +19,7 @@
         padding: 0.5rem;
 
         background-color: var(--c-color-background-B);
+        border: var(--c-border-generic);
     }
 
     .navigator .item p {
