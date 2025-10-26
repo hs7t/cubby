@@ -15,3 +15,16 @@
 <button onclick={updateString}>
     {currentString}
 </button>
+
+<style>
+    button {
+        align-self: center;
+        background-color: inherit;
+        border: none;
+
+        font-family: var(--c-font-family-display);
+        font-size: var(--c-font-size-B);
+        text-transform: uppercase;
+        color: inherit;
+    }
+</style>
