@@ -7,5 +7,5 @@ export type Marker = {
   id: string;
 };
 
-export let websites = await parseResponseJSON(await api.get("websites/all"));
+export const websites = await parseResponseJSON(await api.get("websites/all"));
 console.log(websites)
