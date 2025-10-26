@@ -1,15 +1,21 @@
+<script>
+    import { websites } from "../../shared.svelte";
+</script>
+
 
 <section class="navigation">
     <div class="navigator">
-        <div class="item">
-            <div class="number">
-                <p>1</p>
+        {#each websites as website}
+            <div class="item">
+                <div class="number">
+                    <p>{websites.indexOf(website)}</p>
+                </div>
+                <div class="info">
+                    <p class="site-name">{website.name}</p>
+                    <p class="site-address">{website.address}</p>
+                </div>
             </div>
-            <div class="info">
-                <p class="site-name">Ali's Website</p>
-                <p class="site-address">12 Raspberry Way, HUK</p>
-            </div>
-        </div>
+        {/each}
     </div>
 </section>
 
