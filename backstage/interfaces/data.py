@@ -3,6 +3,7 @@
 import dataset
 import os
 from pydantic import BaseModel
+from typing import List
 
 os.environ["DATABASE_URL"] = "sqlite:///_data.db"
 db = dataset.connect()
@@ -20,6 +21,7 @@ class Website(BaseModel):
     name: str
     url: str
     address: str
+    mapCoordinates: List[int]
 
 class DuplicateError(Exception):
     """Raised when there's a duplicate entry."""
