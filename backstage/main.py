@@ -1,16 +1,16 @@
 from fastapi import FastAPI
 from fastapi import APIRouter
-import data
+import interfaces.data
 
 app = FastAPI()
 v1Router = APIRouter(prefix="/v1", tags=["v1"])
 
 @v1Router.get('/websites/all')
 def getAllWebsites():
-    return data.getWebsites()
+    return interfaces.data.getWebsites()
 
 @v1Router.post('/website/new')
-def createWebsite(website: data.Website):
-    data.addWebsite(website)
+def createWebsite(website: interfaces.data.Website):
+    interfaces.data.addWebsite(website)
 
 app.include_router(v1Router)

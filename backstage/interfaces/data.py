@@ -1,9 +1,10 @@
 # type: ignore      // pylance doesn't like dataset
 
 import dataset
+import os
 from pydantic import BaseModel
 
-DATABASE_URL = "sqlite:///_data.db"
+os.environ["DATABASE_URL"] = "sqlite:///_data.db"
 db = dataset.connect()
 
 websites = db['websites']
@@ -25,4 +26,4 @@ def addWebsite(website: Website):
     Creates an entry in the database for a new Website.
     """
     with dataset.connect() as tx:
-        tx['websites'].insert(website)
+        tx['websites'].insert(website.model_dump())
