@@ -29,6 +29,8 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+        max-height: 100%;
+        overflow-y: scroll;
         flex-grow: 1;
         gap: 0.2em;
     }
