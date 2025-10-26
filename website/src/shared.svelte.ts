@@ -1,4 +1,4 @@
-import { api } from "./api";
+import { api, parseResponseJSON } from "./api";
 
 export type Marker = {
   coordinates: Array<number>;
@@ -7,4 +7,5 @@ export type Marker = {
   id: string;
 };
 
-export let websites = await api.get("/websites/all");
+export let websites = await parseResponseJSON(await api.get("websites/all"));
+console.log(websites)
