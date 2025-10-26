@@ -45,7 +45,7 @@
         flex-wrap: wrap;
 
         gap: 2rem;
-        height: 90dvh;
+        height: 80dvh;
         width: 80dvw;
     }
 
