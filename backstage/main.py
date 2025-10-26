@@ -24,4 +24,8 @@ def amendWebsite(website: interfaces.data.Website):
     except interfaces.data.NonExistentError:
         raise HTTPException(404, "Unable to find this website.")
 
+@v1Router.post('/website/delete')
+def deleteWebsite(cubbyId: str):
+    interfaces.data.deleteWebsite(cubbyId)
+
 app.include_router(v1Router)
