@@ -15,7 +15,7 @@ def getWebsites():
     return websites.all()
 
 class Website(BaseModel):
-    id: str
+    cubbyId: str
     name: str
     url: str
 
