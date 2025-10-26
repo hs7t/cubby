@@ -4,7 +4,7 @@ import dataset
 from pydantic import BaseModel
 
 DATABASE_URL = "sqlite:///_data.db"
-db = dataset.connect
+db = dataset.connect()
 
 websites = db['websites']
 
