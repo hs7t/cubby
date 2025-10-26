@@ -37,7 +37,8 @@ def addWebsite(website: Website):
     """
     with db:
         table = db['websites']
-        if not (table.find(cubbyId=website.cubbyId)):
+        if (len(list(table.find(cubbyId=website.cubbyId))) == 0):
             table.insert(website.model_dump())
         else:
+            print(list(table.find(cubbyId=website.cubbyId)))
             raise DuplicateError('cubbyId already registered')
