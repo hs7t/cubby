@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from fastapi import APIRouter
+from fastapi import HTTPException
 import interfaces.data
 
 app = FastAPI()
@@ -11,6 +12,9 @@ def getAllWebsites():
 
 @v1Router.post('/website/new')
 def createWebsite(website: interfaces.data.Website):
-    interfaces.data.addWebsite(website)
+    try:
+        interfaces.data.addWebsite(website)
+    except interfaces.data.DuplicateError:
+        raise HTTPException(409, "This website already exists.")
 
 app.include_router(v1Router)
