@@ -30,6 +30,7 @@
         flex-direction: column;
         justify-content: flex-end;
         flex-grow: 1;
+        gap: 0.2em;
     }
 
     .navigator .item {
