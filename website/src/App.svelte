@@ -12,7 +12,6 @@
         <Map markers={[
             { coordinates: [500, 500], title: "Meow", action: () => { console.log("I was clicked!") }, id: "testMarker" }
         ]}></Map>
-        <RandomStringClicker strings={["It's cold outside. Fancy some websites?"]}></RandomStringClicker>
     </span>
     <span class="group second-group">
         <Navigation></Navigation>
