@@ -1,1 +1,1 @@
-export const API_URL = "https://api.cubby.website"
+export const API_URL = "https://api.cubby.website/v1"
