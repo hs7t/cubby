@@ -1,5 +1,8 @@
 
 <section class="navigation">
+    <header>
+        It's cold outside. Fancy some websites?
+    </header>
     <div class="navigator">
         <div class="item">
             <div class="number">
@@ -17,6 +20,12 @@
     .navigation {
         display: flex;
         flex-direction: column;
+    }
+
+    .navigation header {
+        font-family: var(--c-font-family-display);
+        font-size: var(--c-font-size-B);
+        text-transform: uppercase;
     }
 
     .navigator {
