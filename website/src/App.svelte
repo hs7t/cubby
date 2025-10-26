@@ -4,7 +4,7 @@
     import Navigation from "./lib/sections/Navigation.svelte";
     import { websites, type Marker } from './shared.svelte'
 
-    let mapMarkers = $derived(() => {
+    const mapMarkers = $derived.by(() => {
         let markers: Array<Marker> = []
         for (let website of websites) {
             let marker: Marker = {
@@ -22,9 +22,7 @@
 <main>
     <span class="group first-group">
         <Header></Header>
-        <Map markers={[
-            { coordinates: [500, 500], title: "Meow", action: () => { console.log("I was clicked!") }, id: "testMarker" }
-        ]}></Map>
+        <Map markers={mapMarkers}></Map>
     </span>
     <span class="group second-group">
         <Navigation></Navigation>
