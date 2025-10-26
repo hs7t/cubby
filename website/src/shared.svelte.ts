@@ -7,5 +7,15 @@ export type Marker = {
   id: string;
 };
 
-export const websites = await parseResponseJSON(await api.get("websites/all"));
+type Website = {
+  cubbyId: string;
+  name: string;
+  url: string;
+  address: string;
+  mapCoordinates: Array<string>;
+};
+
+export const websites = (await parseResponseJSON(
+  await api.get("websites/all")
+)) as Array<Website>;
 console.log(websites)
