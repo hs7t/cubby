@@ -5,11 +5,11 @@ import data
 app = FastAPI()
 v1Router = APIRouter(prefix="/v1", tags=["v1"])
 
-@v1Router.get('websites/all')
+@v1Router.get('/websites/all')
 def getAllWebsites():
     return data.getWebsites()
 
-@v1Router.post('website/new')
+@v1Router.post('/website/new')
 def createWebsite(website: data.Website):
     data.addWebsite(website)
 
