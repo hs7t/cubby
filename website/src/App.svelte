@@ -6,6 +6,7 @@
     import { websites, type Marker, type Website } from './shared.svelte'
 
     let selectedWebsite = $state(undefined) as Website|undefined
+    let websiteInfoOverlayShown = $state(false)
 
     const mapMarkers = $derived.by(() => {
         let markers: Array<Marker> = []
@@ -13,7 +14,10 @@
             let marker: Marker = {
                 title: website.name,
                 coordinates: website.mapCoordinates,
-                action: () => { selectedWebsite = website },
+                action: () => { 
+                    selectedWebsite = website
+                    websiteInfoOverlayShown = true
+                },
                 id: website.cubbyId
             }
             markers.push(marker)
@@ -32,7 +36,7 @@
     </span>
 </main>
 
-<WebsiteInfoOverlay website={selectedWebsite} />
+<WebsiteInfoOverlay website={selectedWebsite} bind:shown={websiteInfoOverlayShown} />
 
 <style>
     :global(body) {
