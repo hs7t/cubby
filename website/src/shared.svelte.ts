@@ -15,7 +15,11 @@ type Website = {
   mapCoordinates: Array<number>;
 };
 
-export const websites = (await parseResponseJSON(
+const shuffle = (array: Array<any>) => {
+  return array.sort(() => Math.random() - 0.5);
+}
+
+export const websites = await shuffle((await parseResponseJSON(
   await api.get("websites/all")
-)) as Array<Website>;
+))) as Array<Website>;
 console.log(websites)
