@@ -13,7 +13,7 @@
     })
 </script>
 
-<dialog bind:this={dialogReference} onclose={() => shown = false} closedby="any">
+<dialog class="dialog" bind:this={dialogReference} onclose={() => shown = false} closedby="any">
     <nav>
         <h2>{title}</h2>
         <Button id="close-button" content="Close" action={() => { shown = false }} />
@@ -22,7 +22,7 @@
 </dialog>
 
 <style>
-    dialog {
+    .dialog {
         width: clamp(280px, 100%, 560px);
         display: flex;
         flex-direction: column;
@@ -43,7 +43,7 @@
         justify-self: center;
     }
 
-    dialog:focus {
+    .dialog:focus {
         outline: var(--c-border-attention);
         outline-offset: 3pt;
     }
@@ -59,11 +59,11 @@
         }
     }
 
-    dialog::backdrop {
+    .dialog::backdrop {
         opacity: 0;
     }
 
-    dialog nav {
+    .dialog nav {
         width: 100%;
         display: flex;
         flex-direction: row;
@@ -71,8 +71,17 @@
         align-items: center;
     }
 
-    :global(dialog h2, dialog h3, dialog p) {
+    :global(.dialog h2, .dialog h3, .dialog p) {
         font-size: inherit;
+    }
+
+    :global(.dialog h2, .dialog h3) {
+        text-transform: uppercase;
+        width: 100%;
+    }
+
+    :global(.dialog h2) {
+        text-align: center;
     }
 
     :global(#close-button) {
@@ -84,7 +93,7 @@
         list-style-type: decimal;
     }
 
-    dialog:not([open]) {
+    .dialog:not([open]) {
         display: none;
         transition: all;
     }
