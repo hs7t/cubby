@@ -13,6 +13,8 @@ export type Website = {
   url: string;
   address: string;
   mapCoordinates: Array<number>;
+  review: string;
+  directions: Array<string>;
 };
 
 const shuffle = (array: Array<any>) => {
