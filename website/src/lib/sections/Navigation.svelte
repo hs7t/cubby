@@ -1,12 +1,15 @@
 <script>
-    import { websites } from "../../shared.svelte";
+    import { uiState, websites } from "../../shared.svelte";
 </script>
 
 
 <section class="navigation">
     <div class="navigator">
         {#each websites as website}
-            <button class="item">
+            <button class="item" onclick={() => {
+                uiState.selectedWebsite = website
+                uiState.websiteInfoOverlayShown = true
+            }}>
                 <div class="number">
                     <p>{websites.indexOf(website)}</p>
                 </div>
