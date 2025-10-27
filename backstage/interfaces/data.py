@@ -21,7 +21,7 @@ def getWebsites():
         # Unjsonify lists from DB
         if isinstance(site['mapCoordinates'], str):
             site['mapCoordinates'] = json.loads(site['mapCoordinates'])
-        if isinstance(site['directions'], str)
+        if isinstance(site['directions'], str):
             site['directions'] = json.loads(site['directions'])
     return results
 
