@@ -6,7 +6,7 @@
 <section class="navigation">
     <div class="navigator">
         {#each websites as website}
-            <div class="item">
+            <button class="item">
                 <div class="number">
                     <p>{websites.indexOf(website)}</p>
                 </div>
@@ -14,7 +14,7 @@
                     <p class="site-name">{website.name}</p>
                     <p class="site-address">{website.address}</p>
                 </div>
-            </div>
+            </button>
         {/each}
     </div>
 </section>
@@ -36,6 +36,8 @@
     }
 
     .navigator .item {
+        all: unset;
+
         display: flex;
         flex-direction: row;
 
@@ -43,6 +45,7 @@
 
         background-color: var(--c-color-background-B);
         border: var(--c-border-generic);
+        cursor: pointer;
     }
 
     .navigator .item p {
