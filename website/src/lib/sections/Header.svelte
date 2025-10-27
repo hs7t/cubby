@@ -94,5 +94,19 @@
         border: var(--c-border-generic);
         background-color: var(--c-color-background-B);
         user-select: none;
+        transition: all 100ms;
+    }
+
+    #leafButton:hover {
+        transform: scale(0.8) rotate(-5deg);
+    }
+
+    #leafButton:focus {
+        outline: var(--c-border-attention);
+        outline-offset: 3pt;
+    }
+
+    #leafButton:active {
+        transform: scale(2) rotate(5deg);
     }
 </style>
