@@ -62,11 +62,11 @@
     }
 
     .navigator .item:hover {
-        transform: rotate(-1deg) scale(0.9);
+        transform: rotate(-1deg) scale(0.95);
     }
 
     .navigator .item:active {
-        transform: rotate(5deg) scale(0.9);
+        transform: rotate(0deg) scale(1.05);
     }
 
     @keyframes navigationFocusing {
