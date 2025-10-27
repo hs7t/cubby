@@ -1,8 +1,9 @@
 <script lang="ts">
     import Map from "./lib/components/Map.svelte";
+    import WebsiteInfoOverlay from "./lib/components/WebsiteInfoOverlay.svelte";
     import Header from "./lib/sections/Header.svelte"
     import Navigation from "./lib/sections/Navigation.svelte";
-    import { websites, type Marker } from './shared.svelte'
+    import { uiState, websites, type Marker, type Website } from './shared.svelte'
 
     const mapMarkers = $derived.by(() => {
         let markers: Array<Marker> = []
@@ -10,7 +11,10 @@
             let marker: Marker = {
                 title: website.name,
                 coordinates: website.mapCoordinates,
-                action: () => { console.log("click!", website.name, website.cubbyId)},
+                action: () => { 
+                    uiState.selectedWebsite = website
+                    uiState.websiteInfoOverlayShown = true
+                },
                 id: website.cubbyId
             }
             markers.push(marker)
@@ -28,6 +32,8 @@
         <Navigation></Navigation>
     </span>
 </main>
+
+<WebsiteInfoOverlay website={uiState.selectedWebsite} bind:shown={uiState.websiteInfoOverlayShown} />
 
 <style>
     :global(body) {
