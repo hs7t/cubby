@@ -6,6 +6,17 @@
 
 <Dialog bind:shown={shown} title={website?.name}>
     {#snippet content()}
-        <p>Something goes here</p>
+        <section>
+            <h3>About</h3>
+            <p>{website?.review}</p>
+        </section>
+        <section>
+            <h3>Getting there</h3>
+            <ol>
+                {#each website?.directions as direction}
+                    <li>{direction}</li>
+                {/each}
+            </ol>
+        </section>
     {/snippet}
 </Dialog>
