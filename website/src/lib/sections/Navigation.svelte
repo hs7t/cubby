@@ -46,12 +46,21 @@
         background-color: var(--c-color-background-B);
         border: var(--c-border-generic);
         cursor: pointer;
+        transition: all 200ms;
     }
 
     .navigator .item:focus {
         outline: var(--c-border-attention);
         outline-offset: 1pt;
         animation: 200ms navigationFocusing;
+    }
+
+    .navigator .item:hover {
+        transform: rotate(-1deg) scale(0.9);
+    }
+
+    .navigator .item:active {
+        transform: rotate(5deg) scale(0.9);
     }
 
     @keyframes navigationFocusing {
