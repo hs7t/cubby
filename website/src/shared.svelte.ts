@@ -23,3 +23,8 @@ export const websites = await shuffle((await parseResponseJSON(
   await api.get("websites/all")
 ))) as Array<Website>;
 console.log(websites)
+
+export const uiState = $state({
+  selectedWebsite: undefined as Website|undefined,
+  websiteInfoOverlayShown: false
+})
