@@ -7,7 +7,7 @@ export type Marker = {
   id: string;
 };
 
-type Website = {
+export type Website = {
   cubbyId: string;
   name: string;
   url: string;
