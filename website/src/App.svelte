@@ -1,5 +1,6 @@
 <script lang="ts">
     import Map from "./lib/components/Map.svelte";
+  import WebsiteInfoOverlay from "./lib/components/WebsiteInfoOverlay.svelte";
     import Header from "./lib/sections/Header.svelte"
     import Navigation from "./lib/sections/Navigation.svelte";
     import { websites, type Marker, type Website } from './shared.svelte'
@@ -30,6 +31,8 @@
         <Navigation></Navigation>
     </span>
 </main>
+
+<WebsiteInfoOverlay website={selectedWebsite} />
 
 <style>
     :global(body) {
