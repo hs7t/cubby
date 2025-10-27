@@ -84,6 +84,7 @@ def updateWebsite(website: Website):
         if len(list(table.find(cubbyId=website.cubbyId))) > 0:
             data = website.model_dump()
             data['mapCoordinates'] = json.dumps(data['mapCoordinates'])
+            data['directions'] = json.dumps(data['directions'])
             table.update(data, ['cubbyId'])
         else:
             raise NonExistentError('cubbyId not found; nothing to update')
