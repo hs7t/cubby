@@ -2,7 +2,9 @@
     import Map from "./lib/components/Map.svelte";
     import Header from "./lib/sections/Header.svelte"
     import Navigation from "./lib/sections/Navigation.svelte";
-    import { websites, type Marker } from './shared.svelte'
+    import { websites, type Marker, type Website } from './shared.svelte'
+
+    let selectedWebsite = $state(undefined) as Website|undefined
 
     const mapMarkers = $derived.by(() => {
         let markers: Array<Marker> = []
@@ -10,7 +12,7 @@
             let marker: Marker = {
                 title: website.name,
                 coordinates: website.mapCoordinates,
-                action: () => { console.log("click!", website.name, website.cubbyId)},
+                action: () => { selectedWebsite = website },
                 id: website.cubbyId
             }
             markers.push(marker)
