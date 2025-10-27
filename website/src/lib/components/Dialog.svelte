@@ -29,8 +29,8 @@
         gap: 1rem;
         align-items: flex-start;
 
-        color: inherit;
-        font-size: inherit;
+        color: var(--c-color-primary);
+        font-size: 1.5rem;
         border: var(--c-border-generic);
         background-color: var(--c-color-background-C);
 
@@ -72,7 +72,7 @@
     }
 
     :global(dialog h2, dialog h3, dialog p) {
-        font-size: 1.5rem;
+        font-size: inherit;
     }
 
     :global(#close-button) {
