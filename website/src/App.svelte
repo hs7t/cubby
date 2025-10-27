@@ -86,4 +86,10 @@
     :global(section), .group {
         flex-grow: 1;
     }
+
+    @media (max-width: 720px) {
+        .first-group {
+            min-height: 50vh;
+        }
+    }
 </style>
