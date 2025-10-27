@@ -18,8 +18,11 @@ def getWebsites():
     results = list(websites.all())
 
     for site in results:
+        # Unjsonify lists from DB
         if isinstance(site['mapCoordinates'], str):
             site['mapCoordinates'] = json.loads(site['mapCoordinates'])
+        if isinstance(site['directions'], str)
+            site['directions'] = json.loads(site['directions'])
     return results
 
 
@@ -29,6 +32,8 @@ class Website(BaseModel):
     url: str
     address: str
     mapCoordinates: List[int]
+    review: str
+    directions: List[str]
 
 class DuplicateError(Exception):
     """Raised when there's a duplicate entry."""
@@ -48,7 +53,11 @@ def addWebsite(website: Website):
         table = db['websites']
         if len(list(table.find(cubbyId=website.cubbyId))) == 0:
             data = website.model_dump()
+
+            # DB doesn't support lists; jsonify them
             data['mapCoordinates'] = json.dumps(data['mapCoordinates'])
+            data['directions'] = json.dumps(data['directions'])
+
             table.insert(data)
         else:
             print(list(table.find(cubbyId=website.cubbyId)))
