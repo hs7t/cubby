@@ -1,11 +1,24 @@
 <script lang="ts">
     import confetti from 'canvas-confetti'
-    var scalar = 2;
-    var leaf = confetti.shapeFromText({ text: '🍂', scalar });
 
-    var count = 200;
+    let heading = $state("cubby · website")
+    const seasonHeadings = [
+        "fall?? or autumn",
+        "hot · chocolate",
+        "pumpkin · website",
+        "get some leaves!"
+    ]
 
-    var defaults = {
+    const getRandomSeasonHeading = () => {
+        return seasonHeadings[Math.floor(Math.random() * seasonHeadings.length)]
+    }
+
+    let scalar = 2;
+    let leaf = confetti.shapeFromText({ text: '🍂', scalar });
+
+    let count = 200;
+
+    let defaults = {
         spread: 360,
         ticks: 60,
         gravity: 0,
@@ -16,7 +29,7 @@
         origin: { y: 2 }
     };
 
-    function fire(particleRatio: number, opts: object) {
+    const throwConfetti = (particleRatio: number, opts: object) => {
         confetti({
             ...defaults,
             ...opts,
@@ -24,42 +37,45 @@
         });
     }
 
-    const handleHeadingClick = () => {
-    fire(0.25, {
-    spread: 26,
-    startVelocity: 55,
-    });
-    fire(0.2, {
-    spread: 60,
-    });
-    fire(0.35, {
-    spread: 100,
-    decay: 0.91,
-    scalar: 0.8
-    });
-    fire(0.1, {
-    spread: 120,
-    startVelocity: 25,
-    decay: 0.92,
-    scalar: 1.2
-    });
-    fire(0.1, {
-    spread: 120,
-    startVelocity: 45,
-    });    }
+    const handleHeadingButtonClick = () => {
+        throwConfetti(0.25, {
+            spread: 26,
+            startVelocity: 55,
+        });
+        throwConfetti(0.2, {
+            spread: 60,
+        });
+        throwConfetti(0.35, {
+            spread: 100,
+            decay: 0.91,
+            scalar: 0.8
+        });
+        throwConfetti(0.1, {
+            spread: 120,
+            startVelocity: 25,
+            decay: 0.92,
+            scalar: 1.2
+        });
+        throwConfetti(0.1, {
+            spread: 120,
+            startVelocity: 45,
+        });
+
+        heading = getRandomSeasonHeading()
+    }
 </script>
 
 <header>
-    <a onclick={handleHeadingClick}>
-        <h1>cubby.website</h1>
-    </a>
+    <h1>{heading}</h1>
+    <button id="leafButton" onclick={handleHeadingButtonClick}>🍂</button>
 </header>
 
 <style>
     header {
         width: 100%;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        gap: 1em;
         align-items: center;
         justify-content: center;
 
@@ -71,5 +87,12 @@
         font-size: var(--c-font-size-AAA);
         font-family: var(--c-font-family-display);
         font-weight: 400;
+    }
+
+    #leafButton {
+        padding: 1ch;
+        border: var(--c-border-generic);
+        background-color: var(--c-color-background-B);
+        user-select: none;
     }
 </style>
