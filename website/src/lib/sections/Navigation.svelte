@@ -48,6 +48,24 @@
         cursor: pointer;
     }
 
+    .navigator .item:focus {
+        outline: var(--c-border-attention);
+        outline-offset: 1pt;
+        animation: 200ms navigationFocusing;
+    }
+
+    @keyframes navigationFocusing {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(0.98);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
     .navigator .item p {
         text-transform: uppercase;
         font-weight: 500;
