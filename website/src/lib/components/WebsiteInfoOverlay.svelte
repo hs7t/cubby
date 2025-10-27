@@ -4,8 +4,8 @@
     import Dialog from "./Dialog.svelte";
 </script>
 
-<Dialog bind:shown={shown}>
+<Dialog bind:shown={shown} title={website?.name}>
     {#snippet content()}
-        <h2>{website?.name}</h2>
+        <p>Something goes here</p>
     {/snippet}
 </Dialog>
