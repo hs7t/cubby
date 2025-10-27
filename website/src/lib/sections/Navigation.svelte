@@ -29,9 +29,11 @@
         max-height: 100%;
         overflow-y: auto;
         scrollbar-gutter: stable;
+        overflow: visible;
     }
 
     .navigator {
+        overflow: visible;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
