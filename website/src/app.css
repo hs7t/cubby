@@ -17,4 +17,5 @@
     --c-font-size-B: 1rem;
 
     --c-border-generic: solid 1.5pt var(--c-color-primary);
+    --c-border-attention: dashed 1.5pt var(--c-color-background-C);
 }
