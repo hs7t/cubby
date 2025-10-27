@@ -31,9 +31,8 @@
 
         color: inherit;
         font-size: inherit;
-        border: var(--i-border-primary);
-        border-radius: var(--i-radius-primary);
-        background-color: var(--i-color-overlay-background);
+        border: var(--c-border-generic);
+        background-color: var(--c-color-background-C);
 
         animation: 100ms dialogEnter;
         animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -45,7 +44,7 @@
     }
 
     dialog:focus {
-        outline: var(--t-border-secondary);
+        outline: var(--c-border-attention);
         outline-offset: 3pt;
     }
 
@@ -61,9 +60,7 @@
     }
 
     dialog::backdrop {
-        animation: 600ms backdropEnter forwards;
-        background-color: #fff;
-        opacity: 0.5;
+        opacity: 0;
     }
 
     dialog nav {
