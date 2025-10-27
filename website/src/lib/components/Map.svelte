@@ -53,6 +53,11 @@
         flex-grow: 1;
     }
 
+    #map:focus {
+        outline: var(--c-border-attention);
+        outline-offset: 3pt;
+    }
+
     :global(.markerNumberIcon) {
         display: flex;
         align-items: center;
