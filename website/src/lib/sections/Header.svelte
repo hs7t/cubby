@@ -79,7 +79,7 @@
         align-items: center;
         justify-content: center;
 
-        padding-bottom: 0.5rem;
+        padding-bottom: 2vh;
         border-bottom: var(--c-border-generic);
     }
 
@@ -87,6 +87,7 @@
         font-size: var(--c-font-size-AAA);
         font-family: var(--c-font-family-display);
         font-weight: 400;
+        line-height: 1;
     }
 
     #leafButton {
