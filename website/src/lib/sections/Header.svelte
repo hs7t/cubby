@@ -26,14 +26,15 @@
         startVelocity: 20,
         shapes: [leaf],
         scalar,
-        origin: { y: 2 }
+        origin: { y: 2 },
+        disableForReducedMotion: true
     };
 
     const throwConfetti = (particleRatio: number, opts: object) => {
         confetti({
             ...defaults,
             ...opts,
-            particleCount: Math.floor(count * particleRatio)
+            particleCount: Math.floor(count * particleRatio),
         });
     }
 
