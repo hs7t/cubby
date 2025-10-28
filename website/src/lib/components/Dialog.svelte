@@ -24,6 +24,8 @@
 <style>
     .dialog {
         width: clamp(280px, 100%, 560px);
+        max-height: 80vh;
+        overflow-x: auto;
         display: flex;
         flex-direction: column;
         gap: 1rem;
@@ -71,8 +73,14 @@
         align-items: center;
     }
 
-    :global(.dialog h2, .dialog h3, .dialog p) {
+    :global(.dialog section) {
+        width: 100%;
+    }
+
+    :global(.dialog h2, .dialog h3, .dialog p, .dialog ol, .dialog li) {
         font-size: inherit;
+        word-wrap: break-word;
+        max-width: 100%;
     }
 
     :global(.dialog h2, .dialog h3) {
