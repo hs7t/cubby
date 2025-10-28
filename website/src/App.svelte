@@ -85,6 +85,7 @@
 
     :global(section), .group {
         flex-grow: 1;
+        transition: all 400ms;
     }
 
     @media (max-width: 720px) {
