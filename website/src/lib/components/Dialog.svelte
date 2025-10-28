@@ -16,7 +16,7 @@
 <dialog class="dialog" bind:this={dialogReference} onclose={() => shown = false} closedby="any">
     <nav>
         <h2>{title}</h2>
-        <Button id="close-button" content="Close" action={() => { shown = false }} />
+        <Button addedClass="close-button" content="Close" action={() => { shown = false }} />
     </nav>
     {@render content()}
 </dialog>
@@ -92,8 +92,9 @@
         text-align: center;
     }
 
-    :global(#close-button) {
+    :global(.dialog .close-button) {
         align-self: flex-end;
+        cursor: pointer;
     }
 
     :global(ol) {

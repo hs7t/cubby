@@ -1,8 +1,8 @@
 <script>
-    let { content = $bindable("click me!"), action, disabled = $bindable(false), id = "button-r", primary = false } = $props()
+    let { content = $bindable("click me!"), action, disabled = $bindable(false), id = "button-r", primary = false, addedClass = "" } = $props()
 </script>
 
-<button onclick={action} {disabled} {id} class={primary ? "primary" : "secondary"}>
+<button onclick={action} {disabled} {id} class={`${primary ? "primary" : "secondary"} ${addedClass}`}>
     {content}
 </button>
 
@@ -17,6 +17,7 @@
         border: var(--c-border-generic);
         font-family: var(--c-font-family-primary);
         transition: all 100ms;
+        cursor: pointer;
     }
 
     button:focus {

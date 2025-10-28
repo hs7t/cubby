@@ -33,6 +33,7 @@
         border: var(--c-border-generic);
         font-family: var(--c-font-family-primary);
         transition: all 100ms;
+        cursor: pointer;
     }
 
     button:focus {
