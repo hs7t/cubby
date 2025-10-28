@@ -2,11 +2,27 @@
     let { content = "Navigate", url, disabled = $bindable(false), id = "button-navigate" } = $props()
 </script>
 
-<button onclick={() => window.open(url, "_blank", 'location=yes,height=570,width=520,scrollbars=yes,status=yes')} {disabled} {id}>
-    {content}
-</button>
+<div class="navigateButtonContainer">
+    <button onclick={() => window.open(url, "_blank", 'location=yes,height=570,width=520,scrollbars=yes,status=yes')} {disabled} {id}>
+        {content}
+    </button>
+    <small>(will take you to {url})</small>
+</div>
 
 <style>
+    .navigateButtonContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        align-self: center;
+        gap: 0.5rem;
+    }
+
+    small {
+        font-size: 0.8rem;
+    }
+
     button {
         font-size: 1.5rem;
         padding: 0.5ch;
