@@ -6,7 +6,8 @@ every website gets a point on a map.
 ## Features
 - look at the map! (I designed it with rice!)
 - click on map points - or navigator items - to discover new websites!
-- read critic-like descriptions of websites as if they were places!
+- find spots with silly addresses!
+- read silly directions and descriptions of websites!
 
 ## About
 
@@ -21,6 +22,7 @@ This project was initially made for [Hack Club](https://hackclub.com/)'s [Siege]
 - [NodeJS](https://nodejs.org/) (thank you Node we all say in unison)
 - [Leaflet](https://leafletjs.com/), absolutely awesome maps!
 - [ky](https://github.com/sindresorhus/ky), for requests!
+- [canvas-confetti](https://www.kirilv.com/canvas-confetti/) - it's confetti! Yay!
 
 ### Backend side
 - [Python](https://python.org/) (yay)
@@ -82,3 +84,4 @@ Python both installed, from [`backstage`](./backstage/):
 ## Credits 
 - [Using Leaflet with SvelteKit](https://khromov.se/using-leaflet-with-sveltekit/) by Stanislav Khromov
 - [How to make a fantasy rice map](https://thecozyartteacher.com/how-to-make-a-rice-fantasy-map/) by The Cozy Art Teacher
+- u/PizzaTucker's [neat trick to use an emoji as a favicon](https://www.reddit.com/r/webdev/comments/w8gx24/here_is_a_neat_trick_i_found_to_use_an_emoji_as_a/)
