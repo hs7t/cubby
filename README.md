@@ -11,7 +11,7 @@ every website gets a point on a map.
 
 ## About
 
-This project was initially made for [Hack Club](https://hackclub.com/)'s [Siege](https://siege.hackclub.com/), a weekly project challenge. It was week four for me at the start of this project.
+This project was initially made for week four of [Hack Club](https://hackclub.com/)'s [Siege](https://siege.hackclub.com/)!
 
 ## Tech used (some of it)
 
