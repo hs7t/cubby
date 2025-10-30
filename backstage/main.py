@@ -10,21 +10,21 @@ v1Router = APIRouter(prefix="/v1", tags=["v1"])
 def getAllWebsites():
     return interfaces.data.getWebsites()
 
-@v1Router.post('/website/new')
+# @v1Router.post('/website/new')
 def createWebsite(website: interfaces.data.Website):
     try:
         interfaces.data.addWebsite(website)
     except interfaces.data.DuplicateError:
         raise HTTPException(409, "This website already exists.")
 
-@v1Router.post('/website/amend')
+# @v1Router.post('/website/amend')
 def amendWebsite(website: interfaces.data.Website):
     try:
         interfaces.data.updateWebsite(website)
     except interfaces.data.NonExistentError:
         raise HTTPException(404, "Unable to find this website.")
 
-@v1Router.post('/website/delete')
+# @v1Router.post('/website/delete')
 def deleteWebsite(cubbyId: str):
     interfaces.data.deleteWebsite(cubbyId)
 
