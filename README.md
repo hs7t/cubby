@@ -6,7 +6,7 @@ every website gets a point on a map.
 ## Features
 - look at the map! (I designed it with rice!)
 - click on map points - or navigator items - to discover new websites! (point numbers shuffle around!)
-- find spots with silly addresses!
+- find spots with make-believe addresses!
 - read silly directions and descriptions of websites!
 
 ## About
