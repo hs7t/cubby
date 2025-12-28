@@ -1,3 +1,5 @@
+import websiteJSONURL from '/sites.json?url'
+
 export type Marker = {
     coordinates: Array<number>
     title: string
@@ -19,8 +21,9 @@ const shuffle = (array: Array<any>) => {
     return array.sort(() => Math.random() - 0.5)
 }
 
-export const websites = undefined as Array<Website>
-console.log(websites)
+export const websites: Array<Website> = await (
+    await fetch(websiteJSONURL)
+).json()
 
 export const uiState = $state({
     selectedWebsite: undefined as Website | undefined,
