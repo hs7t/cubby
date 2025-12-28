@@ -1,0 +1,17 @@
+# build script, based on Vite docs -
+name: Copy /sites.json to /website/src/public/sites.json
+on:
+    push:
+        branches: ['main']
+    workflow_dispatch:
+permissions:
+    contents: write
+concurrency:
+    group: ${{ github.workflow }}-${{ github.ref }}
+    cancel-in-progress: true
+jobs:
+    main:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Copy file
+              run: cp sites.json website/public/sites.json
