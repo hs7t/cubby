@@ -13,5 +13,19 @@ jobs:
     main:
         runs-on: ubuntu-latest
         steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+            - name: Check diff
+              id: diffcheck
+              uses: hyorimitsu/actions-check-diff@v0.0.1
             - name: Copy file
+              if: steps.diffcheck.outputs.file-diff > 0
               run: cp sites.json website/public/sites.json
+            - name: Push changes
+              if: steps.diffcheck.outputs.file-diff > 0
+              run: |
+                  git config user.name "Github Actions [bot]"
+                  git config user.email "github-actions[bot]@users.noreply.github.com"
+                  git add website/public/sites.json
+                  git commit -m "Copy /sites.json to /website/src/public/sites.json"
+                  git push
