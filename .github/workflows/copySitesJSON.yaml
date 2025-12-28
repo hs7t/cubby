@@ -1,4 +1,3 @@
-# build script, based on Vite docs -
 name: Copy /sites.json to /website/src/public/sites.json
 on:
     push:
