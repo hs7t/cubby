@@ -1,0 +1,52 @@
+[
+    {
+        "cubbyId": "yours",
+        "name": "Ali's Website",
+        "url": "https://hs7t.cc/",
+        "address": "12 Raspberry Road, HUK",
+        "mapCoordinates": [500, 300],
+        "review": "Website. Ali made it!",
+        "directions": ["Teleport"]
+    },
+    {
+        "cubbyId": "bomb",
+        "name": "bomberfish.ca",
+        "url": "https://bomberfish.ca/",
+        "address": "404 Porpol Location, HUK",
+        "mapCoordinates": [600, 200],
+        "review": "Cat!!! And lots of badges.",
+        "directions": [
+            "Walk 3 minutes to station H-ML",
+            "Take the 3A train, arriving at Porpol station",
+            "Bike northward, up the hill, for a while"
+        ]
+    },
+    {
+        "cubbyId": "bunny",
+        "name": "bunnyguy dot foo",
+        "url": "https://bunnyguy.foo/",
+        "address": "1 Haiku Place, VAL",
+        "mapCoordinates": [860, 914],
+        "review": "Pleasant scent of carrots. Nice bowtie.",
+        "directions": [
+            "Get down the Pickle Island-Huckleberry ferry at Maple Port",
+            "Walk 10 minutes to station H-KT",
+            "Take trains 1B and 8R until their last stops to arrive at H-BL",
+            "Boat around 3 minutes to Valentine",
+            "Walk 4 minutes. Find the rabbit with the bucket hat"
+        ]
+    },
+    {
+        "cubbyId": "hex",
+        "name": "hex4",
+        "url": "https://hex4.xyz/",
+        "address": "64 Reverie Street, HUK",
+        "mapCoordinates": [785, 317],
+        "review": "Computer. Hexagons are the bestagons.",
+        "directions": [
+            "Take a jetpack",
+            "Fly the jetpack to [785, 317]",
+            "Land"
+        ]
+    }
+]
